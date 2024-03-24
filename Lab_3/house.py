@@ -83,13 +83,13 @@ def make_move(state,action):
         player[0] += 1
     elif action == "Gore-desno 2":
         player[1] += 2
-        player[0] += 1
+        player[0] += 2
     elif action == "Gore-levo 1":
         player[1] += 1
         player[0] -= 1
     elif action == "Gore-levo 2":
         player[1] += 2
-        player[0] -= 1
+        player[0] -= 2
     return tuple(player), state[1], direction
 
 
