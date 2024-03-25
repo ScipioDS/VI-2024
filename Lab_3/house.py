@@ -27,14 +27,23 @@ class ReachHouse(Problem):
         house = state[1]
         return player[0] == house[0] and player[1] == house[1]
 
-    def h(self,node):
-        value=0
-        x_man = node.state[0][0]
-        y_man = node.state[0][1]
-        for a in allowed:
-            if a[1]==y_man and a[0]>x_man:
-                value+=1
-        return value
+    def h(self, node):
+        # number 1 // 100%
+        # value = 0
+        # player = node.state[0]
+        # for obj in self.allowed:
+        #     if obj[1] == player[1] and obj[0] > player[0]:
+        #         value += 1
+        # return value
+        # number 2 // 77%
+        # player = node.state[0]
+        # house = node.state[1]
+        # return (abs(player[0] - house[0]) + abs(player[1] - house[1])) // 3
+        # number 3 // 100%
+        player = node.state[0]
+        house = node.state[1]
+        return (player[1] - house[1]) / 2
+
 
 
 def check_valid(state, allowed):
