@@ -1,11 +1,12 @@
 from constraint import *
 
-def MaxFour(v1, v2, v3, v4, v5, v6 , v7, v8, v9 , v10):
+
+def MaxFour(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10):
     count1 = 0
     count2 = 0
     count3 = 0
     count4 = 0
-    temp = [v1, v2, v3, v4, v5, v6 , v7, v8, v9 , v10]
+    temp = [v1, v2, v3, v4, v5, v6, v7, v8, v9, v10]
 
     for v in temp:
         if v == "T1":
@@ -23,8 +24,8 @@ if __name__ == '__main__':
     num = int(input())
 
     papers = dict()
-    ai =[]
-    ml=[]
+    ai = []
+    ml = []
     nlp = []
 
     paper_info = input()
@@ -63,5 +64,8 @@ if __name__ == '__main__':
     result = problem.getSolution()
 
     # Tuka dodadete go kodot za pechatenje
-    for r in result:
-        print(r + ": " + result.get(r))
+    res = sorted(result)
+    print(res[0] + ": " + result[res[0]])
+    for i in range(2, 10):
+        print(res[i] + ": " + result[res[i]])
+    print(res[1] +": " + result[res[1]])
