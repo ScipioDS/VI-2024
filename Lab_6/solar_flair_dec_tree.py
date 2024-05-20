@@ -16,7 +16,7 @@ dataset_sample = [['C', 'S', 'O', '1', '2', '1', '1', '2', '1', '2', '0'],
 
 if __name__ == '__main__':
     # Vashiot kod tuka
-    percent = float(input())/100.0
+    percent = 1 - (float(input())/100.0)
     criterion = input()
 
     encoder = OrdinalEncoder()
