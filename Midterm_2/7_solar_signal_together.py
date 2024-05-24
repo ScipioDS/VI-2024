@@ -440,12 +440,12 @@ def precision(test_data, test_x, test_y, classifier):
             if predicted == actual:
                 TP += 1
             else:
-                FP += 1
+                FN += 1
         else:
             if predicted == actual:
                 TN += 1
             else:
-                FN += 1
+                FP += 1
 
     if (TP + FP) == 0:
         percision = 0.0

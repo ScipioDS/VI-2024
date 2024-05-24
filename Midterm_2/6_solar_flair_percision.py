@@ -697,12 +697,12 @@ if __name__ == '__main__':
             if predicted == actual:
                 TP += 1
             else:
-                FP += 1
+                FN += 1
         else:
             if predicted == actual:
                 TN += 1
             else:
-                FN += 1
+                FP += 1
 
     accuracy = (TP + TN) / (TP + FP + TN + FN)
     print(f'Accuracy: {accuracy:}')
